@@ -5,6 +5,8 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <cstring>
+#include <cstdlib>
 
 #define OPEN_FILE_ERR "Error: could not open file."
 #define BAD_INPUT "Error: bad input => "

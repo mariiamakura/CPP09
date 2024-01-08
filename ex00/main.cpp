@@ -35,6 +35,7 @@ static void checkInput(std::ifstream &inputData, BitcoinExchange &btc) {
         const char *ratePtr = strcpy(new char[rateStr.length() + 1], rateStr.c_str());
         float rate = std::atof(ratePtr);
         std::cout << date << " => " << rate << " = " << std::setprecision(2) << rate * btc.getRateFromDataBase(date) << std::endl;
+        delete ratePtr;
     }
 }
 

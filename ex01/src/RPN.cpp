@@ -19,6 +19,9 @@ const char *RPN::WrongArgument::what() const throw() {
 }
 
 bool RPN::checkParam(const std::string &av) {
+
+    if (av.empty() || av.find_first_not_of(" ") == std::string::npos)
+        return false;
     if (av.find_first_not_of("0123456789+-/* ") != std::string::npos)
         return false;
     std::stringstream anStream(av);

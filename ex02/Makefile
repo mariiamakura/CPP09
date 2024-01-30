@@ -26,4 +26,4 @@ fclean : clean
 re: fclean all
 
 run : fclean all
-	./$(NAME) 345 645 89 563
+	./$(NAME) 3 5 9 7 4

@@ -16,6 +16,11 @@ int main(int ac, char **av) {
     if (!test.checkParam(av[1]))
         return (ft_error("Wrong arguments"));
     size_t res;
-    res = test.calculate(av[1]);
+    try {
+        res = test.calculate(av[1]);
+    } catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+        return 1;
+    }
     std::cout << res << std::endl;
 }
